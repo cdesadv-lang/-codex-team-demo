@@ -59,3 +59,7 @@ PLAYWRIGHT_MODULE=/tmp/team-browser/node_modules/playwright-core/index.mjs node 
 إعداد `render.yaml` يجهز خدمة Node مجانية مؤقتة مع كلمة مرور واسم نطاق مسموح محدد. راجع [تعليمات المعاينة](docs/render-preview.md) قبل أي نشر. التشغيل المحلي العادي لا يتغير. هذا الإعداد لم يُنشر بعد، ويتطلب ربط حساب Render والتحقق من الحصة المجانية. لا تستخدمه لحفظ بيانات مهمة لأن تخزين SQLite مؤقت عند الاستضافة المجانية.
 
 لفحص المتصفح بوضع كلمة المرور محليًا: أضف `SMOKE_PREVIEW=true` إلى أمر فحص Chromium السابق.
+
+## تشغيل من الموبايل عبر Codespaces
+
+افتح https://codespaces.new/cdesadv-lang/-codex-team-demo لإنشاء بيئة بحصتك المجانية بعد مراجعة التكلفة. إعداد .devcontainer يثبت الاعتماديات ويبني التطبيق، ثم يبدأ معاينة المنفذ3000 بعد فرض Private. افتح المنفذ من Ports بحساب GitHub نفسه. التفاصيل وحدود الاستخدام في [codespaces-preview.md](docs/codespaces-preview.md). هذا رابط إنشاء البيئة وليس رابط تطبيق منشورًا بالفعل.
