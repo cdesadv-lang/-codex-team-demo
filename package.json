@@ -1,0 +1,15 @@
+{
+  "name": "codex-team-demo",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node server/main.js",
+    "test": "node --test tests/*.test.js",
+    "build": "npm --prefix web run build",
+    "check:agents": "python scripts/check_agents.py",
+    "test:browser": "node scripts/browser-smoke.mjs"
+  }
+}

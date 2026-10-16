@@ -1,0 +1,21 @@
+# Temporary password-protected demo. No paid services or persistent disks.
+# Deploy only after confirming the selected account has free capacity and no billable overage.
+services:
+  - type: web
+    name: codex-team-preview
+    runtime: node
+    plan: free
+    numInstances: 1
+    autoDeployTrigger: "off"
+    buildCommand: npm --prefix web ci --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: 24.19.0
+      - key: PREVIEW_MODE
+        value: "true"
+      - key: PREVIEW_PASSWORD
+        generateValue: true
+      - key: DB_PATH
+        value: /tmp/codex-preview/tasks.sqlite

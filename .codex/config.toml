@@ -1,0 +1,39 @@
+# Project-local configuration for Codex CLI 0.159.2.
+# Role files are resolved relative to this config. Models inherit the active session.
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+
+[features]
+multi_agent = true
+
+[agents]
+max_threads = 7
+max_depth = 1
+
+[agents.frontend_engineer]
+description = "React, Next.js, TypeScript, responsive interfaces and Arabic RTL"
+config_file = "agents/frontend_engineer.toml"
+
+[agents.backend_engineer]
+description = "APIs, database schemas, business logic and integrations"
+config_file = "agents/backend_engineer.toml"
+
+[agents.qa_engineer]
+description = "Automated tests, integration testing and bug detection"
+config_file = "agents/qa_engineer.toml"
+
+[agents.security_engineer]
+description = "Authentication, authorization, data protection and reviews"
+config_file = "agents/security_engineer.toml"
+
+[agents.agent_manager]
+description = "Coordinates delivery, task ownership, dependencies and quality gates"
+config_file = "agents/agent_manager.toml"
+
+[agents.agent_ceo]
+description = "Sets product priorities, success criteria and reviews delivery decisions"
+config_file = "agents/agent_ceo.toml"
+
+[agents.senior_ux_ui_engineer]
+description = "Senior UX/UI design, user journeys, design systems, accessibility and Arabic RTL"
+config_file = "agents/senior_ux_ui_engineer.toml"
